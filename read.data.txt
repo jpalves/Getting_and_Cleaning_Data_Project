@@ -1,0 +1,17 @@
+read.data.txt <-function(file,initCut=NULL,cnames=NULL)
+	
+	if(file.exists(file)){			
+		rowData<-readLines(file)
+		if(!is.null(cut)){
+			cut <- function(x) str_replace_all(string=x, pattern=paste("^",initCut,sep=''),repl="")
+			rowData<-sapply(rowData,cut)
+		}
+		rowData<-strsplit(rowData," +")
+		rowData<-lapply(rowData,function(x) as.numeric(x))
+		rowData<-as.data.frame(t(as.data.frame(rowData))) #unlist is memory fatal
+		rownames(rowData)<-1:nrow(rowData)
+		colnames(rowData)<-cnames
+
+		return(rowData)
+	}
+	
