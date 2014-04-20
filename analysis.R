@@ -16,7 +16,7 @@ if(file.exists("UCI HAR Dataset")){
 	data  <- rbind(read.data.txt("UCI HAR Dataset/test/X_test.txt"," +",cnames=cnames),read.data.txt("UCI HAR Dataset/train/X_train.txt"," +",cnames=cnames))
 	
 	data<-cbind(subject,activity,data[,sort(c(grep('mean',cnames),grep('std',cnames),grep('Mean',cnames)))])
-	write.table(data,'dados.csv',sep=',',dec='.',col.names=TRUE,row.names=FALSE) #for Protugal sep=';' and dec=','
+	write.table(data,'dados.csv',sep=',',dec='.',col.names=TRUE,row.names=FALSE) #for Portugal sep=';' and dec=','
 	
 	incrment <- length(activity_labels) 
 	tidydata<-data.frame(matrix(nrow=(incrment*length(unique(data$Subject))),ncol=ncol(data)))
