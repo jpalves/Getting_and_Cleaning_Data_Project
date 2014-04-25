@@ -41,3 +41,5 @@ tBodyAccJerkMean
 tBodyGyroMean
 tBodyGyroJerkMean
 
+to read tidydata to R
+dados <- read.table('tidydata.txt',header=TRUE,sep='\t',dec='.')
