@@ -13,38 +13,59 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-*tBodyAcc-XYZ
-*tGravityAcc-XYZ
-*tBodyAccJerk-XYZ
-*tBodyGyro-XYZ
-*tBodyGyroJerk-XYZ
-*tBodyAccMag
-*tGravityAccMag
-*tBodyAccJerkMag
-*tBodyGyroMag
-*tBodyGyroJerkMag
-*fBodyAcc-XYZ
-*fBodyAccJerk-XYZ
-*fBodyGyro-XYZ
-*fBodyAccMag
-*fBodyAccJerkMag
-*fBodyGyroMag
-*fBodyGyroJerkMag
+tBodyAcc-XYZ
+
+tGravityAcc-XYZ
+
+tBodyAccJerk-XYZ
+
+tBodyGyro-XYZ
+
+tBodyGyroJerk-XYZ
+
+tBodyAccMag
+
+tGravityAccMag
+
+tBodyAccJerkMag
+
+tBodyGyroMag
+
+tBodyGyroJerkMag
+
+fBodyAcc-XYZ
+
+fBodyAccJerk-XYZ
+
+fBodyGyro-XYZ
+
+fBodyAccMag
+
+fBodyAccJerkMag
+
+fBodyGyroMag
+
+fBodyGyroJerkMag
 
 
 The set of variables that were estimated from these signals are: 
 
-1mean(): Mean value
-2std(): Standard deviation
+mean(): Mean value
+
+std(): Standard deviation
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
-*gravityMean
-*tBodyAccMean
-*tBodyAccJerkMean
-*BodyGyroMean
-*odyGyroJerkMean
+gravityMean
+
+tBodyAccMean
+
+tBodyAccJerkMean
+
+BodyGyroMean
+
+odyGyroJerkMean
 
 to read tidydata to R
 
-*dados <- read.table('tidydata.txt',header=TRUE,sep='\t',dec='.')
+dados <- read.table('tidydata.txt',header=TRUE,sep='\t',dec='.')
